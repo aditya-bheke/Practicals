@@ -1,0 +1,41 @@
+/**
+ * Practical 17 : Business Network using Hyperledger Composer
+ * Model file (.cto) - defines the Participants, Assets, Transactions and Events
+ * of the "hardware-assets" business network.
+ *
+ * Scenario: an organisation tracks its hardware (laptops, monitors ...) on a
+ * blockchain and records every time a device is allocated to a new employee.
+ */
+
+namespace org.lp3.hardware
+
+/** PARTICIPANT - a member of the network (an employee of the organisation) */
+participant Employee identified by employeeId {
+  o String employeeId
+  o String firstName
+  o String lastName
+  o String department optional
+}
+
+/** ASSET - something of value that is owned and transferred */
+asset Hardware identified by hardwareId {
+  o String hardwareId
+  o String name
+  o String type
+  o String description
+  o Double quantity
+  --> Employee owner
+}
+
+/** TRANSACTION - allocate a piece of hardware to a new employee */
+transaction Allocate {
+  --> Hardware hardware
+  --> Employee newOwner
+}
+
+/** EVENT - emitted after every successful allocation */
+event HardwareAllocated {
+  --> Hardware hardware
+  o String oldOwnerId
+  o String newOwnerId
+}

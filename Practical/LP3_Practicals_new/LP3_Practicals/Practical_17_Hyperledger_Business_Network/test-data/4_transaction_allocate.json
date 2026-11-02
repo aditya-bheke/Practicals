@@ -1,0 +1,5 @@
+{
+  "$class": "org.lp3.hardware.Allocate",
+  "hardware": "resource:org.lp3.hardware.Hardware#MAC01",
+  "newOwner": "resource:org.lp3.hardware.Employee#02"
+}

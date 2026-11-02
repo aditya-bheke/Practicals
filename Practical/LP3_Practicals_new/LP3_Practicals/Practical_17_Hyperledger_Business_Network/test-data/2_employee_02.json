@@ -1,0 +1,7 @@
+{
+  "$class": "org.lp3.hardware.Employee",
+  "employeeId": "02",
+  "firstName": "Nirja",
+  "lastName": "Parmar",
+  "department": "Finance"
+}

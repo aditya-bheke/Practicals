@@ -1,0 +1,11 @@
+# LP-III practicals - Python libraries
+# Install with:  pip install -r requirements.txt
+# Practicals 1-5 need none of these (plain Python). Practicals 7-11 need them.
+numpy>=1.23
+pandas>=1.5
+scikit-learn>=1.2
+scipy>=1.9
+matplotlib>=3.6
+seaborn>=0.12
+tensorflow>=2.10      # only Practical 9 (needs 64-bit Python 3.9 - 3.12)
+notebook              # Jupyter, to open the .ipynb files

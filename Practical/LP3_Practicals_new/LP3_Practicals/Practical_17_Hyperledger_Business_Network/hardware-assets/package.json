@@ -1,0 +1,11 @@
+{
+  "name": "hardware-assets",
+  "version": "0.0.1",
+  "description": "LP-III Practical 17 - Hyperledger Composer business network that tracks allocation of hardware assets to employees",
+  "author": "LP3 Practical",
+  "license": "Apache-2.0",
+  "engines": {
+    "composer": "^0.20.0"
+  },
+  "keywords": ["composer", "composer-network", "hyperledger"]
+}

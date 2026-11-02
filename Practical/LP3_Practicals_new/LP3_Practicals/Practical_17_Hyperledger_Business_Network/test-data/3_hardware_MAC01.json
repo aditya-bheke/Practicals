@@ -1,0 +1,9 @@
+{
+  "$class": "org.lp3.hardware.Hardware",
+  "hardwareId": "MAC01",
+  "name": "MacBook Pro 2015",
+  "type": "Laptop",
+  "description": "MacBook Pro 13 inch",
+  "quantity": 1,
+  "owner": "resource:org.lp3.hardware.Employee#01"
+}

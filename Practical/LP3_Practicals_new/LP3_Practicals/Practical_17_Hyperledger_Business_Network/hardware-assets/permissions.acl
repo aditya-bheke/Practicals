@@ -1,0 +1,28 @@
+/**
+ * Practical 17 : Access Control List (permissions.acl)
+ * Decides which participant can perform which operation on which resource.
+ */
+
+rule AllAccess {
+    description: "AllAccess - grant everything to everybody in this network"
+    participant: "ANY"
+    operation: ALL
+    resource: "org.lp3.hardware.**"
+    action: ALLOW
+}
+
+rule SystemACL {
+    description: "System ACL to permit all access to system resources"
+    participant: "org.hyperledger.composer.system.Participant"
+    operation: ALL
+    resource: "org.hyperledger.composer.system.**"
+    action: ALLOW
+}
+
+rule NetworkAdminUser {
+    description: "Grant business network administrators full access to user resources"
+    participant: "org.hyperledger.composer.system.NetworkAdmin"
+    operation: ALL
+    resource: "**"
+    action: ALLOW
+}
